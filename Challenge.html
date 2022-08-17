@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador</title>
+        <link rel ="stylesheet"href="reset.css">
+        <link rel="stylesheet"href="stylechallenge.css">
+    </head>
+    <body>
+        <main> 
+            
+            <div>
+                <p class=cuadrado></p>
+                <section class="muneco" id="muneco">              
+                    <img class="imgmuneco" src="Muñeco.png" width="400" height="350" >
+                    <p> Ningún texto fue encontrado</p>                  
+                </section>
+            <form>  
+                <textarea id="textodesencriptado" class="textoencriptado" placeholder="Ingrese el texto aquí"></textarea>
+                <p class="aviso">ⒾSolo minúsculas y sin acentos</p>
+           </form>
+           </div>
+
+            <div >  
+            <button id="btncopiar" onclick="copiar()" class = "copiar" > Copiar</button>
+            <textarea id="textoencriptado" class="textodesencriptado" placeholder="Ingresa el texto que desees encriptar o desencriptar."> </textarea>
+            </div>
+
+            <div>
+                <button onclick="encriptar()" class="encriptar" id="encriptar">ENCRIPTAR</button>
+                <button onclick="desencriptar()" id="desencriptar"> DESENCRIPTAR</butto>
+            </div>
+
+        </main>
+        
+        <footer>
+            <p class="datos">Nombre:Edgar Rosario, email:edg507@outlook.com</p>
+        </footer>
+        
+    <script> 
+
+    var mensaje=document.getElementById("textodesencriptado");
+        var textodesencriptado= document.getElementById("textoencriptado");
+        var btnencriptar=document.getElementById("encriptar");
+        var btndesencriptar= document.getElementById("desencriptar");
+        var muneco= document.getElementById("muneco") ;
+        var btncopiar= document.getElementById("btncopiar");
+
+        btncopiar.style.display= "none";
+
+        function encriptar(){
+            var msj=mensaje.value;
+            var msjencriptado=msj.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+           
+            textodesencriptado.value=msjencriptado;
+            muneco.style.display="none";
+            btncopiar.style.display= "inline";
+        }
+
+        function desencriptar(){
+            var msj=mensaje.value;
+            var  msjdesencriptado= msj.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+            textoencriptado.value=msjdesencriptado;
+        }
+
+        function copiar(){
+            var content = document.getElementById('textoencriptado');
+            content.select();
+            document.execCommand('copy');
+        }  
+        
+    </script>
+
+    </body>
+
+        
+<html>  

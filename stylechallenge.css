@@ -1,0 +1,205 @@
+main{
+    background: linear-gradient(rgb(229, 244, 245),white) ;
+}
+form{
+    display:inline;
+    width: 940px;
+}
+
+.cuadrado {
+    position: relative;
+    left:800px;
+    top:20px;
+    height: 550px;
+    width: 500px;
+    border: 3px solid #555555;
+    background:linear-gradient(rgb(195, 195, 245), white);
+}
+
+
+.copiar{
+    position: absolute;
+    margin: 10px;
+    height: 67px;
+    width: 328px;
+    left: 875px;
+    top: 475px;
+}
+
+.textoencriptado{
+    position: absolute;
+    top:5px;
+    left:20px;
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 50px;
+    color: blue;
+    border: white;
+    background: linear-gradient(rgb(229, 244, 245),white) ;
+}
+.aviso{
+    font-size: 20px;
+}
+
+.muneco{
+    position:absolute;
+    top:150px;
+    left:850px;
+    text-align: center;
+    font-size: 20px;
+    
+}
+.textodesencriptado{
+    position: absolute;
+    left: 850px;
+    top:40px;
+    text-align: center;
+    height: 50px;
+    width: 400px;
+    border-color:blue;
+    background:linear-gradient(rgb(195, 195, 245), white);
+
+}
+
+button{
+    margin: 10px;
+    height: 67px;
+    width: 328px;
+    left: 50px;
+    top: 500px;
+    border-radius: 24px;
+    border-color: blue;
+    padding: 24px;
+    cursor: pointer;
+    background-color: aquamarine;
+    color: blue;
+}
+
+button:hover{
+    scale: 1.1;
+}
+
+.encriptar{
+    left:50px;
+    color: white;
+    background-color: blue ;
+}
+
+footer{
+    top:800px;
+    text-align: center;
+    background: black;
+    padding: 40px;
+}
+
+.datos{
+    color:white;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width:480px){
+    body{
+        width: 100%;
+    }
+
+    .cuadrado{
+        height: 400px;
+        width: 30px;
+        display:inherit;
+        left: 20px;
+        top: 5px;
+        border: none;
+        margin-bottom: 15px;
+    }
+    .muneco {
+        display:none;
+    }
+    .textoencriptado{
+        margin:0 0 0 50px;
+        width: auto;
+        height: 400px;
+    }
+
+    .textodesencriptado{
+        top:600px;
+        left: 35px;
+        width: 300px;
+        height: 50px;
+        margin:0 0 0 0;
+    }
+    button{
+        margin:5px 25px 5px 25px;
+    }
+    .aviso{
+        text-align: center;
+    }
+    .copiar{
+        top:675px;
+        left:15px;
+        height: auto;
+    }
+
+    footer{
+        margin:200px 0 0 0;
+    }
+}
+
+    @media screen and (max-width:800px) and (min-width:500px){
+        body{
+            width: 100%;
+        }
+        .imgmuneco {
+            width: 300px;
+            height: 350px;
+            top: 600px;
+            left:25px;
+            display: none;
+        }
+        .muneco{
+            position: absolute;
+            left:300px;
+            top:450px;
+
+        }
+        button{
+            margin: 5px 25px 5px 25px;;
+        }
+        .textoencriptado{
+            margin: 20px 0px 0 30px;
+            left:10px;
+            width: 300px;
+            height: 300px;
+        }
+        .textodesencriptado{
+            top: 475px;
+            left:25px;
+            width:700px;
+            
+        }
+
+        .aviso{
+            margin: 50px 0 0 15px;
+        }
+
+         .copiar{
+            left:15px;
+            top:525px;
+            width: 700px;
+        }
+        .cuadrado{
+            height: 300px;
+            width: 300px;
+            top:25px;
+            left: 10px;
+            border:none;
+        }
+
+        footer{
+            margin:150px 0 0 0;
+
+        }
+}
